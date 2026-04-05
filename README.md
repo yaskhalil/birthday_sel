@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# 🎂 Selena's Birthday App 2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Selena OS** - a high-performance, gesture-controlled birthday experience built for the one and only Selena!
 
-Currently, two official plugins are available:
+## 🚀 Experience Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **Finger Gesture Navigation**: Use your hand! The app uses **MediaPipe Computer Vision** to track how many fingers you're holding up to switch modes. 
+    *   **1 Finger**: 🕯️ Blow out 20 digital candles (Mic-detection enabled!).
+    *   **2 Fingers**: 💅 Photo Gallery - Toggle between **Diva** and **Gremlin** vibes.
+    *   **3 Fingers**: 🧩 Word Search - Find the secret words (including the legendary **FETTIG** vertically!).
+*   **Birthday Lockdown**: Built-in protection screen. Unless it's **April 12th, 2026**, you're staying out... unless you know the secret password.
+*   **The Gift Prank**: A psychological test... who enters their real address in a random app? (Don't worry, we're not actually evil 🤣).
+*   **Sticker Aesthetic**: Premium "Kawaii/Cozy" design with die-cut borders, hard shadows, and smooth bouncy animations.
 
-## React Compiler
+## 🛠️ Technical Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS v4 (Sticker Design System)
+- **Computer Vision**: @mediapipe/hands
+- **Motion**: Framer Motion
+- **Interactions**: Web Audio API (for blowing candles)
 
-## Expanding the ESLint configuration
+## 📦 How to Run Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/yaskhalil/birthday_sel.git
+   cd birthday_sel
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Start Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. **Access the App**:
+   Open `http://localhost:5173` in your browser.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔐 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This app is optimized for **Vercel** deployment with a serverless backend handled in `/api/prank.ts`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Created with ❤️ for Selena's Birthday.*

@@ -45,7 +45,7 @@ export const PrankForm: React.FC = () => {
                     >
                         <h2 className="font-headline text-3xl font-black mb-2 uppercase text-center">Claim Physical Gift</h2>
                         <p className="font-bold opacity-70 mb-8 mt-2 text-center text-sm">
-                            Please provide your shipping address to receive the physical sticker pack!
+                            Please provide your shipping address to receive the ACTUAL gift!
                         </p>
 
                         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
